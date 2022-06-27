@@ -1,0 +1,371 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://SusDialogue.gd" type="Script" id=2]
+[ext_resource path="res://SusDialogue2.gd" type="Script" id=3]
+[ext_resource path="res://new_theme.tres" type="Theme" id=4]
+
+[node name="Main" type="Control"]
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+theme = ExtResource( 4 )
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -152.0
+margin_top = -77.0
+margin_right = 132.8
+margin_bottom = 73.0
+color = Color( 0.835294, 0.682353, 0.439216, 1 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Buttons" type="VBoxContainer" parent="HBoxContainer"]
+margin_right = 380.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Promise" type="Button" parent="HBoxContainer/Buttons"]
+margin_right = 380.0
+margin_bottom = 85.0
+size_flags_vertical = 3
+text = "Promise unfulfillable things"
+
+[node name="Collab" type="Button" parent="HBoxContainer/Buttons"]
+margin_top = 89.0
+margin_right = 380.0
+margin_bottom = 175.0
+size_flags_vertical = 3
+text = "Collab with a celebrity"
+
+[node name="Hack" type="Button" parent="HBoxContainer/Buttons"]
+margin_top = 179.0
+margin_right = 380.0
+margin_bottom = 265.0
+size_flags_vertical = 3
+text = "Hack a social media account"
+
+[node name="Control" type="Control" parent="HBoxContainer/Buttons"]
+margin_top = 269.0
+margin_right = 380.0
+margin_bottom = 300.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.35
+
+[node name="Coin" type="Button" parent="HBoxContainer/Buttons"]
+margin_top = 304.0
+margin_right = 380.0
+margin_bottom = 390.0
+size_flags_vertical = 3
+text = "Sell a Crypto"
+
+[node name="Mine" type="Button" parent="HBoxContainer/Buttons"]
+margin_top = 394.0
+margin_right = 380.0
+margin_bottom = 480.0
+size_flags_vertical = 3
+text = "Mine a Crypto"
+
+[node name="Container" type="Control" parent="HBoxContainer"]
+margin_left = 384.0
+margin_right = 434.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.13
+
+[node name="Stats" type="VBoxContainer" parent="HBoxContainer"]
+margin_left = 438.0
+margin_right = 819.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Value" type="Panel" parent="HBoxContainer/Stats"]
+margin_right = 381.0
+margin_bottom = 238.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Lines" type="VBoxContainer" parent="HBoxContainer/Stats/Value"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Panel" type="Panel" parent="HBoxContainer/Stats/Value/Lines"]
+margin_right = 381.0
+margin_bottom = 117.0
+size_flags_vertical = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="HBoxContainer/Stats/Value/Lines/Panel"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="Label" type="Label" parent="HBoxContainer/Stats/Value/Lines/Panel/VBoxContainer"]
+margin_top = 21.0
+margin_right = 381.0
+margin_bottom = 35.0
+size_flags_vertical = 6
+text = "Crypto Value"
+align = 1
+valign = 2
+
+[node name="Crash" type="Label" parent="HBoxContainer/Stats/Value/Lines/Panel/VBoxContainer"]
+visible = false
+margin_top = 42.0
+margin_right = 381.0
+margin_bottom = 73.0
+size_flags_vertical = 6
+text = "crypto price crash immenant!
+cash out immedietly!"
+align = 1
+valign = 2
+uppercase = true
+
+[node name="Value" type="Label" parent="HBoxContainer/Stats/Value/Lines/Panel/VBoxContainer"]
+margin_top = 81.0
+margin_right = 381.0
+margin_bottom = 95.0
+size_flags_vertical = 6
+text = "0"
+align = 1
+valign = 2
+
+[node name="ProgressBar" type="ProgressBar" parent="HBoxContainer/Stats/Value/Lines"]
+margin_top = 121.0
+margin_right = 381.0
+margin_bottom = 238.0
+size_flags_horizontal = 7
+size_flags_vertical = 3
+max_value = 20.0
+value = 1.0
+percent_visible = false
+
+[node name="Stuff" type="Panel" parent="HBoxContainer/Stats"]
+margin_top = 242.0
+margin_right = 381.0
+margin_bottom = 480.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HBoxContainer" type="VBoxContainer" parent="HBoxContainer/Stats/Stuff"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+size_flags_vertical = 3
+
+[node name="Money" type="HBoxContainer" parent="HBoxContainer/Stats/Stuff/HBoxContainer"]
+margin_right = 381.0
+margin_bottom = 56.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/Stats/Stuff/HBoxContainer/Money"]
+margin_right = 124.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Money"
+align = 1
+valign = 1
+
+[node name="Amount" type="Label" parent="HBoxContainer/Stats/Stuff/HBoxContainer/Money"]
+margin_left = 128.0
+margin_right = 252.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "0"
+align = 2
+valign = 1
+
+[node name="Amount2" type="Label" parent="HBoxContainer/Stats/Stuff/HBoxContainer/Money"]
+margin_left = 256.0
+margin_right = 381.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "£"
+valign = 1
+
+[node name="Coins" type="HBoxContainer" parent="HBoxContainer/Stats/Stuff/HBoxContainer"]
+margin_top = 60.0
+margin_right = 381.0
+margin_bottom = 117.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/Stats/Stuff/HBoxContainer/Coins"]
+margin_right = 124.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Crypto"
+align = 1
+valign = 1
+
+[node name="Amount" type="Label" parent="HBoxContainer/Stats/Stuff/HBoxContainer/Coins"]
+margin_left = 128.0
+margin_right = 252.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "0"
+align = 2
+valign = 1
+
+[node name="Amount2" type="Label" parent="HBoxContainer/Stats/Stuff/HBoxContainer/Coins"]
+margin_left = 256.0
+margin_right = 381.0
+margin_bottom = 57.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+valign = 1
+
+[node name="Suspicion" type="HBoxContainer" parent="HBoxContainer/Stats/Stuff/HBoxContainer"]
+margin_top = 121.0
+margin_right = 381.0
+margin_bottom = 177.0
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="HBoxContainer/Stats/Stuff/HBoxContainer/Suspicion"]
+margin_right = 124.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Suspicion"
+align = 1
+valign = 1
+
+[node name="Amount" type="Label" parent="HBoxContainer/Stats/Stuff/HBoxContainer/Suspicion"]
+margin_left = 128.0
+margin_right = 252.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "0"
+align = 2
+valign = 1
+
+[node name="Amount2" type="Label" parent="HBoxContainer/Stats/Stuff/HBoxContainer/Suspicion"]
+margin_left = 256.0
+margin_right = 381.0
+margin_bottom = 56.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "/ 100"
+valign = 1
+
+[node name="CashOut" type="Button" parent="HBoxContainer/Stats/Stuff/HBoxContainer"]
+margin_top = 181.0
+margin_right = 381.0
+margin_bottom = 238.0
+size_flags_vertical = 3
+text = "Cash out!"
+
+[node name="SusDialogue" type="PopupDialog" parent="."]
+anchor_left = 0.2
+anchor_top = 0.2
+anchor_right = 0.8
+anchor_bottom = 0.8
+popup_exclusive = true
+script = ExtResource( 2 )
+money_lost = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SusDialogue"]
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+
+[node name="Label" type="Label" parent="SusDialogue/VBoxContainer"]
+margin_right = 393.0
+margin_bottom = 113.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Oops, a couple people got suspicous of your crypto gift.
+
+Choose one to silence them:"
+align = 1
+valign = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SusDialogue/VBoxContainer"]
+margin_top = 117.0
+margin_right = 393.0
+margin_bottom = 230.0
+size_flags_vertical = 3
+
+[node name="Money" type="Button" parent="SusDialogue/VBoxContainer/HBoxContainer"]
+margin_right = 183.0
+margin_bottom = 113.0
+size_flags_horizontal = 3
+text = "-20 Money"
+
+[node name="Control" type="Control" parent="SusDialogue/VBoxContainer/HBoxContainer"]
+margin_left = 187.0
+margin_right = 205.0
+margin_bottom = 113.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.1
+
+[node name="Sus" type="Button" parent="SusDialogue/VBoxContainer/HBoxContainer"]
+margin_left = 209.0
+margin_right = 393.0
+margin_bottom = 113.0
+size_flags_horizontal = 3
+text = "+10 Suspicion"
+
+[node name="SusDialogue2" type="PopupDialog" parent="."]
+anchor_left = 0.2
+anchor_top = 0.2
+anchor_right = 0.8
+anchor_bottom = 0.8
+popup_exclusive = true
+script = ExtResource( 3 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SusDialogue2"]
+anchor_left = 0.1
+anchor_top = 0.1
+anchor_right = 0.9
+anchor_bottom = 0.9
+
+[node name="Label" type="Label" parent="SusDialogue2/VBoxContainer"]
+margin_right = 393.0
+margin_bottom = 113.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+text = "Oops, many people got very suspicous of your crypto gift. Better run while you can!
+
+You have to cash out your coins"
+align = 1
+valign = 1
+autowrap = true
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SusDialogue2/VBoxContainer"]
+margin_top = 117.0
+margin_right = 393.0
+margin_bottom = 230.0
+size_flags_vertical = 3
+
+[node name="Sus" type="Button" parent="SusDialogue2/VBoxContainer/HBoxContainer"]
+margin_right = 393.0
+margin_bottom = 113.0
+size_flags_horizontal = 3
+text = "Ok..."
+
+[connection signal="pressed" from="HBoxContainer/Buttons/Promise" to="." method="_on_Promise_pressed"]
+[connection signal="pressed" from="HBoxContainer/Buttons/Collab" to="." method="_on_Collab_pressed"]
+[connection signal="pressed" from="HBoxContainer/Buttons/Hack" to="." method="_on_Hack_pressed"]
+[connection signal="pressed" from="HBoxContainer/Buttons/Coin" to="." method="_on_Coin_pressed"]
+[connection signal="pressed" from="HBoxContainer/Buttons/Mine" to="." method="_on_Mine_pressed"]
+[connection signal="pressed" from="HBoxContainer/Stats/Stuff/HBoxContainer/CashOut" to="." method="_on_CashOut_pressed"]
+[connection signal="about_to_show" from="SusDialogue" to="SusDialogue" method="_on_SusDialogue_about_to_show"]
+[connection signal="pressed" from="SusDialogue/VBoxContainer/HBoxContainer/Money" to="SusDialogue" method="_on_Money_pressed"]
+[connection signal="pressed" from="SusDialogue/VBoxContainer/HBoxContainer/Sus" to="SusDialogue" method="_on_Sus_pressed"]
+[connection signal="cash_out" from="SusDialogue2" to="." method="_on_SusDialogue2_cash_out"]
+[connection signal="pressed" from="SusDialogue2/VBoxContainer/HBoxContainer/Sus" to="SusDialogue2" method="_on_Sus_pressed"]

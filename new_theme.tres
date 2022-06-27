@@ -1,0 +1,78 @@
+[gd_resource type="Theme" load_steps=8 format=2]
+
+[ext_resource path="res://FifteenTwenty.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=3]
+size = 19
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 1 )
+
+[sub_resource type="StyleBoxFlat" id=2]
+bg_color = Color( 0.266667, 0.72549, 0.803922, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.027451, 0.027451, 0.298039, 1 )
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 5.0
+expand_margin_right = 2.0
+expand_margin_top = 5.0
+expand_margin_bottom = 2.0
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.231373, 0.388235, 0.415686, 1 )
+border_width_left = 1
+border_width_top = 1
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color( 0.027451, 0.027451, 0.298039, 1 )
+border_blend = true
+corner_radius_top_left = 25
+corner_radius_bottom_left = 25
+expand_margin_left = 3.0
+expand_margin_top = 3.0
+
+[sub_resource type="StyleBoxFlat" id=4]
+bg_color = Color( 0.12549, 0.176471, 0.231373, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.113725, 0.105882, 0.145098, 1 )
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id=6]
+bg_color = Color( 0.333333, 0.635294, 0.643137, 1 )
+corner_radius_top_right = 120
+corner_radius_bottom_right = 120
+
+[resource]
+Button/colors/font_color = Color( 1, 1, 1, 1 )
+Button/colors/font_color_disabled = Color( 0.9, 0.9, 0.9, 0.2 )
+Button/colors/font_color_focus = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_hover = Color( 0.94, 0.94, 0.94, 1 )
+Button/colors/font_color_pressed = Color( 1, 1, 1, 1 )
+Button/constants/hseparation = 2
+Button/fonts/font = SubResource( 3 )
+Button/styles/disabled = null
+Button/styles/focus = null
+Button/styles/hover = SubResource( 2 )
+Button/styles/normal = SubResource( 1 )
+Button/styles/pressed = SubResource( 1 )
+Panel/styles/panel = SubResource( 4 )
+ProgressBar/colors/font_color = Color( 0.94, 0.94, 0.94, 1 )
+ProgressBar/colors/font_color_shadow = Color( 0, 0, 0, 1 )
+ProgressBar/fonts/font = null
+ProgressBar/styles/bg = SubResource( 5 )
+ProgressBar/styles/fg = SubResource( 6 )
